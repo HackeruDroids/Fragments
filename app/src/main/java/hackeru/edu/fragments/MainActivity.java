@@ -17,20 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
         //add, remove, replace, find.
         manager = getSupportFragmentManager();
-
-
         manager.beginTransaction()
                 .replace(R.id.frame1, new ColorPickerFragment())
                 .commit();
-
     }
-
     public void text(View view) {
         manager.beginTransaction()
                 .replace(R.id.frame1, new TextFragment())
                 .commit();
     }
-
     public void color(View view) {
         manager.beginTransaction()
                 .replace(R.id.frame1, new ColorPickerFragment())
