@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.frame1, new ColorPickerFragment())
                 .commit();
     }
+
+    public void replaceTheTextFragmentWithThisNewColor(int color) {
+
+    }
 }

@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,7 @@ public class MyTextFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mivzakim = getArguments().getStringArrayList(ARG_MIVZAKIM);
-
+           // Toast.makeText(getActivity(), "cxczxzxc", Toast.LENGTH_SHORT).show();
         }
     }
 

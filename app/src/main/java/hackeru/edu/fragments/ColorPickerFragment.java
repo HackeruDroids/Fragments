@@ -50,6 +50,9 @@ public class ColorPickerFragment extends Fragment implements SeekBar.OnSeekBarCh
 
         etResult.setText(hex);
         etResult.setBackgroundColor(color);
+
+        MainActivity main = (MainActivity) getActivity();
+        main.replaceTheTextFragmentWithThisNewColor(color);
     }
 
     @Override
