@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class TheMainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView navigationView;
     FragmentManager manager;
@@ -40,8 +42,14 @@ public class TheMainActivity extends AppCompatActivity implements BottomNavigati
                        commit();
                 return true;
             case R.id.navigation_text:
+                ArrayList<String> mivakim = new ArrayList<>();
+                mivakim.add("Everyone just loves the saltyness of peanut butter mousse rinsed with parsley.");
+                mivakim.add("All hands reproduce.");
+                mivakim.add("Cur zelus manducare?");
+                mivakim.add("When the jack rises for jamaica, all furners crush rough, gutless sails.");
+
                 manager.beginTransaction().
-                        replace(R.id.frame1, new TextFragment()).
+                        replace(R.id.frame1, TextFragment.newInstance(mivakim)).
                         commit();
                 return true;
             case R.id.navigation_notifications:
